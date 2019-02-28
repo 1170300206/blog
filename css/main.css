@@ -1090,7 +1090,7 @@ pre .javascript .function {
   bottom: 19px;
 }
 .header {
-  background: transparent;
+  background: url("/home/evanclark/blog/background/DSC_00231.jpg");
 }
 .header-inner {
   position: relative;
@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #47ff11;
+  background: #4a330d;
 }
 .links-of-blogroll {
   font-size: 13px;
