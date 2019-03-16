@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #01b1e9;
+  background: #de4dcc;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3127,4 +3127,18 @@ body {
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: cover;
+}
+.site-meta {
+  padding: 20px 0;
+  color: #fff;
+  background: #124faa;
+}
+.site-overview {
+  text-align: center;
+}
+.site-author-name {
+  margin: 0;
+  text-align: center;
+  color: #0a6dce;
+  font-weight: 600;
 }
