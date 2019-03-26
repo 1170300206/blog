@@ -101,7 +101,7 @@
 
 
 
-  <meta name="keywords" content="markdown,">
+  <meta name="keywords" content="java,">
 
 
 
@@ -112,18 +112,18 @@
 
 
 
-<meta name="description" content="原文来自Markdown基本语法 标题markdown支持六级标题，如下所示 12# 一级标题## 二级标题 字体加粗 需要加粗的文字左右用两个*号包裹 1**加粗** 斜体 需要倾斜的文字左右用一个*号包裹 1*斜体* 斜体加粗 需要倾斜与加粗的文字左右分别用三个*号包裹起来 1***又加粗又倾斜*** 删除线 需要加删除线则左右用~~包裹起来 1~~删除线~~ 引用在引用的文字前加&amp;gt;即可">
-<meta name="keywords" content="markdown">
+<meta name="description" content="​    在定义一个类时，由于对类的使用的需要，我们同上需要重写它的equals()方法。一个类的equals()方法继承于Object类。在Object class的java 文档当中，可以看到如下描述：  The equals method for class Object implements the most discriminating possible equivalence rela">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown语法小记">
-<meta property="og:url" content="http://yoursite.com/2019/03/16/Markdown-Syntax/index.html">
+<meta property="og:title" content="Java 何时需要重写hashCode()和equals()">
+<meta property="og:url" content="http://yoursite.com/2019/03/26/hashCode/index.html">
 <meta property="og:site_name" content="Evan&#39;s blog">
-<meta property="og:description" content="原文来自Markdown基本语法 标题markdown支持六级标题，如下所示 12# 一级标题## 二级标题 字体加粗 需要加粗的文字左右用两个*号包裹 1**加粗** 斜体 需要倾斜的文字左右用一个*号包裹 1*斜体* 斜体加粗 需要倾斜与加粗的文字左右分别用三个*号包裹起来 1***又加粗又倾斜*** 删除线 需要加删除线则左右用~~包裹起来 1~~删除线~~ 引用在引用的文字前加&amp;gt;即可">
+<meta property="og:description" content="​    在定义一个类时，由于对类的使用的需要，我们同上需要重写它的equals()方法。一个类的equals()方法继承于Object类。在Object class的java 文档当中，可以看到如下描述：  The equals method for class Object implements the most discriminating possible equivalence rela">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-16T14:15:10.431Z">
+<meta property="og:updated_time" content="2019-03-26T16:35:02.612Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown语法小记">
-<meta name="twitter:description" content="原文来自Markdown基本语法 标题markdown支持六级标题，如下所示 12# 一级标题## 二级标题 字体加粗 需要加粗的文字左右用两个*号包裹 1**加粗** 斜体 需要倾斜的文字左右用一个*号包裹 1*斜体* 斜体加粗 需要倾斜与加粗的文字左右分别用三个*号包裹起来 1***又加粗又倾斜*** 删除线 需要加删除线则左右用~~包裹起来 1~~删除线~~ 引用在引用的文字前加&amp;gt;即可">
+<meta name="twitter:title" content="Java 何时需要重写hashCode()和equals()">
+<meta name="twitter:description" content="​    在定义一个类时，由于对类的使用的需要，我们同上需要重写它的equals()方法。一个类的equals()方法继承于Object类。在Object class的java 文档当中，可以看到如下描述：  The equals method for class Object implements the most discriminating possible equivalence rela">
 
 
 
@@ -153,13 +153,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/16/Markdown-Syntax/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/26/hashCode/">
 
 
 
 
 
-  <title>Markdown语法小记 | Evan's blog</title>
+  <title>Java 何时需要重写hashCode()和equals() | Evan's blog</title>
   
 
 
@@ -266,7 +266,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/16/Markdown-Syntax/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/26/hashCode/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Evan Clark">
@@ -283,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Markdown语法小记</h1>
+          <h1 class="post-title" itemprop="name headline">Java 何时需要重写hashCode()和equals()</h1>
         
 
         <div class="post-meta">
@@ -295,8 +295,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-16T20:30:08+08:00">
-                2019-03-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T23:35:47+08:00">
+                2019-03-26
               </time>
             
 
@@ -336,8 +336,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/16/Markdown-Syntax/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/16/Markdown-Syntax/" itemprop="commentCount"></span>
+                <a href="/2019/03/26/hashCode/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/26/hashCode/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -370,118 +370,43 @@
       
 
       
-        <p><em>原文来自<a href="https://www.jianshu.com/p/191d1e21f7ed" target="_black">Markdown基本语法</a></em></p>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>markdown支持六级标题，如下所示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br></pre></td></tr></table></figure>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><strong>加粗</strong></p>
-<p>需要加粗的文字左右用两个*号包裹</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**加粗**</span><br></pre></td></tr></table></figure>
-<p><strong>斜体</strong></p>
-<p>需要倾斜的文字左右用一个*号包裹</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*斜体*</span><br></pre></td></tr></table></figure>
-<p><strong>斜体加粗</strong></p>
-<p>需要倾斜与加粗的文字左右分别用三个*号包裹起来</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">***又加粗又倾斜***</span><br></pre></td></tr></table></figure>
-<p><strong>删除线</strong></p>
-<p>需要加删除线则左右用~~包裹起来</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;这是引用的内容</span><br><span class="line">&gt;&gt;这是引用的内容</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</span><br></pre></td></tr></table></figure>
+        <p>​    在定义一个类时，由于对类的使用的需要，我们同上需要重写它的equals()方法。一个类的equals()方法继承于Object类。在<a href="https://docs.oracle.com/javase/10/docs/api/java/lang/Object.html#equals" target="_blank">Object class</a>的java 文档当中，可以看到如下描述：</p>
 <blockquote>
-<p>这是引用的内容</p>
+<p>The <code>equals</code> method for class <code>Object</code> implements the most discriminating possible equivalence relation on objects; that is, for any non-null reference values <code>x</code> and <code>y</code>, this method returns <code>true</code> if and only if <code>x</code> and <code>y</code> refer to the same object (<code>x == y</code> has the value <code>true</code>).</p>
+</blockquote>
+<p>也就意味着，当我们定义一个类并且不重写其equals()方法时，当你使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">obja.equals(objb)</span><br></pre></td></tr></table></figure>
+<p>其效果就相当于在使用”==”来比较两个对象的地址。</p>
+<p>​    在List的文档当中，其contains()方法具有如下的注释：</p>
 <blockquote>
-<p>这是引用的内容</p>
+<p>Returns <code>true</code> if this list contains the specified element. More formally, returns <code>true</code> if and only if this list contains at least one element <code>e</code> such that (o==null ? e==null : o.equals(e))`.</p>
+</blockquote>
+<p>​    可以看出其也调用了元素的equals()方法。因此，为了满足对特定类的比较需求，我们就需要重写定义类的equals()方法，以下是重写equals()的例子。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Edge</span>&lt;<span class="title">L</span>&gt; </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> L source; </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> L target;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> weight;</span><br><span class="line">	...</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(obj == <span class="keyword">this</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(obj.getClass() ==  getClass()) &#123;</span><br><span class="line">            Edge&lt;?&gt; e = (Edge&lt;?&gt;)obj;</span><br><span class="line">            <span class="keyword">if</span>(e.source.equals(<span class="keyword">this</span>.source) &amp;&amp; e.target.equals(<span class="keyword">this</span>.target))</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​    在重写方法时，通常加上<code>@Override</code>的annotation，确保重写了Object的equals()方法。</p>
+<p>​    在上面的例子中，我们重写了一个泛型类Edge<l>的equals()方法。当两个类的source和target分别<strong>相等</strong>（此处的相等也与其equals()方法有关）时，两个对象相等。</l></p>
+<p>​    那么何时需要重写hashCode()方法呢？</p>
+<p>​    java文档中还有这样一句话：</p>
 <blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>这是引用的内容</p>
+<p>Note that it is generally necessary to override the <code>hashCode</code><br>method whenever this method is overridden, so as to maintain the<br>general contract for the <code>hashCode</code> method, which states<br>that equal objects must have equal hash codes.</p>
 </blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>三个或者三个以上的-或者*号都可以</p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![图片alt](图片地址 &quot;图片title&quot;)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br></pre></td></tr></table></figure>
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[超链接名](超链接地址 &quot;超链接title&quot;)</span><br><span class="line">title可加可不加</span><br></pre></td></tr></table></figure>
-<p>注：Markdown本身语法不支持链接在新页面中打开，貌似简书做了处理，是可以的。别的平台可能就不行了，如果想要在新页面中打开的话可以用html语言的a标签代替。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;超链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">示例</span><br><span class="line">&lt;a href=&quot;https://www.jianshu.com/u/1f5ac0cf6a8b&quot; target=&quot;_blank&quot;&gt;简书&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>无序列表用- + *任何一种都可以</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- 列表内容</span><br><span class="line">+ 列表内容</span><br><span class="line">* 列表内容</span><br><span class="line"></span><br><span class="line">注意：- + * 跟内容之间都要有一个空格</span><br></pre></td></tr></table></figure>
-<p>效果如下</p>
-<ul>
-<li>列表内容</li>
-</ul>
-<ul>
-<li>列表内容</li>
-</ul>
-<ul>
-<li>列表内容</li>
-</ul>
-<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>直接数字加点即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 列表内容</span><br><span class="line">2. 列表内容</span><br><span class="line">3. 列表内容</span><br><span class="line"></span><br><span class="line">注意：序号跟内容之间要有空格</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<ol>
-<li>列表内容</li>
-</ol>
-<h3 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h3><p>上一级和下一级之间打三个空格即可</p>
-<ul>
-<li><p>一级列表嵌套</p>
-<ul>
-<li><p>二级列表嵌套</p>
-<ul>
-<li><p>三级列表嵌套</p>
-<ul>
-<li><p>四级列表嵌套</p>
-<p>​    </p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|:--:|---:</span><br><span class="line">内容|内容|内容</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容。</span><br><span class="line">- 有一个就行，为了对齐，多加了几个</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line">注：原生的语法两边都要用 | 包起来。此处省略</span><br><span class="line"></span><br><span class="line">示例</span><br><span class="line">姓名|技能|排行</span><br><span class="line">--|:--:|--:</span><br><span class="line">刘备|哭|大哥</span><br><span class="line">关羽|打|二哥</span><br><span class="line">张飞|骂|三弟</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>姓名</th>
-<th style="text-align:center">技能</th>
-<th style="text-align:right">排行</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>刘备</td>
-<td style="text-align:center">哭</td>
-<td style="text-align:right">大哥</td>
-</tr>
-<tr>
-<td>关羽</td>
-<td style="text-align:center">打</td>
-<td style="text-align:right">二哥</td>
-</tr>
-<tr>
-<td>张飞</td>
-<td style="text-align:center">骂</td>
-<td style="text-align:right">三弟</td>
-</tr>
-</tbody>
-</table>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>单行代码：代码之间分别用一个反引号包起来</p>
-<p>代码块：代码之间分别用三个反引号包起来，且反引号独占一行</p>
-<h2 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">​```flow</span><br><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;</span><br></pre></td></tr></table></figure>
-<p><code>`</code></p>
+<p>​    其建议我们无论在何时都需要重写hashCode()方法。当两个对象有相同的 hash codes并且满足equals()方法时，对象才相等。</p>
+<p>​    hashCode()的作用是获取哈希码（即散列码），其返回的是一个int整数，哈希码的作用时确定对象在哈希表中的索引位置。但是，仅当创建某个类的散列表时，该类的hashCode()才派上用场，Java集合中本质是散列表的类有HashMap, HashTable, HashSet。例如，在一个HashSet中，已经包含了500个元素，当我们需要插入一个新的元素时，如何确定插入的位置？答案是使用哈希表。其能够根据元素的散列码计算出能够插入的位置，如果该位置已经有元素，则按一定的规则移动地址进行存放。</p>
+<p>​    hashCode()是一个对象到散列码的满射，但不一定是单射。也就是说，当两个对象相等时，他们应当具有相同的散列码，但是当他们具有相同的散列码时，两个对象不一定相等。</p>
+<p>​    因此，当我们并不创建类对应的散列表时，hashCode()实际上并未发挥它的作用，其与equals()也并没有关系。</p>
+<p>​    而当我们需要创建散列表时，hashCode()和equals()就有关系了。如果只是单单覆盖equals()方法，我们会发现equals方法没有达到想要的效果。</p>
+<p>​    以如下代码作为例子, 定义一个Vertex类，当source相等时，两个对象相等：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Vertex</span>&lt;<span class="title">L</span>&gt; </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> L source;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Map&lt;L, Integer&gt; targets = <span class="keyword">new</span> HashMap&lt;L, Integer&gt;();</span><br><span class="line">    ...</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *return true if two edge are same instance,</span></span><br><span class="line"><span class="comment">     *or contain same source, target.</span></span><br><span class="line"><span class="comment">     *<span class="doctag">@param</span> obj should be an edge object</span></span><br><span class="line"><span class="comment">     *<span class="doctag">@return</span> true if two edge are same instance,</span></span><br><span class="line"><span class="comment">     *        or contain same source</span></span><br><span class="line"><span class="comment">     *        otherwise return false.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(obj == <span class="keyword">this</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(obj.getClass() == getClass()) &#123;</span><br><span class="line">            Vertex&lt;?&gt; e = (Vertex&lt;?&gt;)obj;</span><br><span class="line">            <span class="keyword">if</span>(e.getSource().equals(source))</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行如下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Vertex&lt;String&gt; v1 = <span class="keyword">new</span> Vertex&lt;&gt;(<span class="string">"a"</span>);</span><br><span class="line">       v1.set(<span class="string">"b"</span>, <span class="number">2</span>);</span><br><span class="line">       Vertex&lt;String&gt; v2 = <span class="keyword">new</span> Vertex&lt;&gt;(<span class="string">"a"</span>);</span><br><span class="line">       Vertex&lt;String&gt; v3 = <span class="keyword">new</span> Vertex&lt;&gt;(<span class="string">"a"</span>);</span><br><span class="line">       Set&lt;Vertex&lt;String&gt;&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">       System.out.println(set.add(v1));</span><br><span class="line">       System.out.println(set.add(v2));</span><br><span class="line">       System.out.println(set.add(v3));</span><br><span class="line">       <span class="keyword">for</span>(Vertex&lt;String&gt; v: set) &#123;</span><br><span class="line">           System.out.println(v.getSource() +<span class="string">"-----hashcode:"</span>+ v.hashCode());</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">true</span><br><span class="line">true</span><br><span class="line">true</span><br><span class="line">a-----hashcode:705927765</span><br><span class="line">a-----hashcode:366712642</span><br><span class="line">a-----hashcode:1829164700</span><br></pre></td></tr></table></figure>
+<p>​    在我们对Vertex的定义中，两个对象相等当且仅当source相等。但是在加入set中时，三个source相同的set都具有相同的source，却都被成功加入set当中。我们可以从输出中看出其散列码均不同。我们重写其hashcode:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> source.hashCode();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>​    这里我们调用了String的hashCode()方法。再次运行结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">true</span><br><span class="line">false</span><br><span class="line">false</span><br><span class="line">a-----hashcode:97</span><br></pre></td></tr></table></figure>
+<p>​    Set的功能已经能够满足我们的要求。</p>
+<p>​    综上，在我们使用类时，如果有比较的需求，就需要重写equals()方法，如果我们有使用散列表的需求，还需要重写hashCode()方法，保证在equals()为真时，两个对象的hashCode相等。</p>
 
       
     </div>
@@ -499,7 +424,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/markdown/" rel="tag"># markdown</a>
+            <a href="/tags/java/" rel="tag"># java</a>
           
         </div>
       
@@ -512,8 +437,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/27/my-New-Post/" rel="next" title="my New Post">
-                <i class="fa fa-chevron-left"></i> my New Post
+              <a href="/2019/03/16/ant-using/" rel="next" title="如何使用Ant自动构建并测试你的java程序">
+                <i class="fa fa-chevron-left"></i> 如何使用Ant自动构建并测试你的java程序
               </a>
             
           </div>
@@ -521,10 +446,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/16/ant-using/" rel="prev" title="如何使用Ant自动构建并测试你的java程序">
-                如何使用Ant自动构建并测试你的java程序 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -617,17 +538,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -731,22 +643,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字体"><span class="nav-number">2.</span> <span class="nav-text">字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">3.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分割线"><span class="nav-number">4.</span> <span class="nav-text">分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片"><span class="nav-number">5.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超链接"><span class="nav-number">6.</span> <span class="nav-text">超链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表"><span class="nav-number">7.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无序列表"><span class="nav-number">7.1.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有序列表"><span class="nav-number">7.2.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表嵌套"><span class="nav-number">7.3.</span> <span class="nav-text">列表嵌套</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格"><span class="nav-number">8.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">9.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程图"><span class="nav-number">10.</span> <span class="nav-text">流程图</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
