@@ -112,18 +112,18 @@
 
 
 
-<meta name="description" content="​    在定义一个类时，由于对类的使用的需要，我们同上需要重写它的equals()方法。一个类的equals()方法继承于Object类。在Object class的java 文档当中，可以看到如下描述：  The equals method for class Object implements the most discriminating possible equivalence rela">
+<meta name="description" content="​    在定义一个类时，由于对类的使用的需要，我们同样需要重写它的equals()方法。一个类的equals()方法继承于Object类。在Object class的java 文档当中，可以看到如下描述：  The equals method for class Object implements the most discriminating possible equivalence rela">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java 何时需要重写hashCode()和equals()">
 <meta property="og:url" content="http://yoursite.com/2019/03/26/hashCode/index.html">
 <meta property="og:site_name" content="Evan&#39;s blog">
-<meta property="og:description" content="​    在定义一个类时，由于对类的使用的需要，我们同上需要重写它的equals()方法。一个类的equals()方法继承于Object类。在Object class的java 文档当中，可以看到如下描述：  The equals method for class Object implements the most discriminating possible equivalence rela">
+<meta property="og:description" content="​    在定义一个类时，由于对类的使用的需要，我们同样需要重写它的equals()方法。一个类的equals()方法继承于Object类。在Object class的java 文档当中，可以看到如下描述：  The equals method for class Object implements the most discriminating possible equivalence rela">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-26T16:35:02.612Z">
+<meta property="og:updated_time" content="2019-03-27T02:00:02.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 何时需要重写hashCode()和equals()">
-<meta name="twitter:description" content="​    在定义一个类时，由于对类的使用的需要，我们同上需要重写它的equals()方法。一个类的equals()方法继承于Object类。在Object class的java 文档当中，可以看到如下描述：  The equals method for class Object implements the most discriminating possible equivalence rela">
+<meta name="twitter:description" content="​    在定义一个类时，由于对类的使用的需要，我们同样需要重写它的equals()方法。一个类的equals()方法继承于Object类。在Object class的java 文档当中，可以看到如下描述：  The equals method for class Object implements the most discriminating possible equivalence rela">
 
 
 
@@ -370,7 +370,7 @@
       
 
       
-        <p>​    在定义一个类时，由于对类的使用的需要，我们同上需要重写它的equals()方法。一个类的equals()方法继承于Object类。在<a href="https://docs.oracle.com/javase/10/docs/api/java/lang/Object.html#equals" target="_blank">Object class</a>的java 文档当中，可以看到如下描述：</p>
+        <p>​    在定义一个类时，由于对类的使用的需要，我们同样需要重写它的equals()方法。一个类的equals()方法继承于Object类。在<a href="https://docs.oracle.com/javase/10/docs/api/java/lang/Object.html#equals" target="_blank">Object class</a>的java 文档当中，可以看到如下描述：</p>
 <blockquote>
 <p>The <code>equals</code> method for class <code>Object</code> implements the most discriminating possible equivalence relation on objects; that is, for any non-null reference values <code>x</code> and <code>y</code>, this method returns <code>true</code> if and only if <code>x</code> and <code>y</code> refer to the same object (<code>x == y</code> has the value <code>true</code>).</p>
 </blockquote>
@@ -388,7 +388,7 @@
 <p>​    那么何时需要重写hashCode()方法呢？</p>
 <p>​    java文档中还有这样一句话：</p>
 <blockquote>
-<p>Note that it is generally necessary to override the <code>hashCode</code><br>method whenever this method is overridden, so as to maintain the<br>general contract for the <code>hashCode</code> method, which states<br>that equal objects must have equal hash codes.</p>
+<p>Note that it is generally necessary to override the <code>hashCode</code> method whenever this method is overridden, so as to maintain the general contract for the <code>hashCode</code> method, which states that equal objects must have equal hash codes.</p>
 </blockquote>
 <p>​    其建议我们无论在何时都需要重写hashCode()方法。当两个对象有相同的 hash codes并且满足equals()方法时，对象才相等。</p>
 <p>​    hashCode()的作用是获取哈希码（即散列码），其返回的是一个int整数，哈希码的作用时确定对象在哈希表中的索引位置。但是，仅当创建某个类的散列表时，该类的hashCode()才派上用场，Java集合中本质是散列表的类有HashMap, HashTable, HashSet。例如，在一个HashSet中，已经包含了500个元素，当我们需要插入一个新的元素时，如何确定插入的位置？答案是使用哈希表。其能够根据元素的散列码计算出能够插入的位置，如果该位置已经有元素，则按一定的规则移动地址进行存放。</p>
@@ -406,7 +406,7 @@
 <p>​    这里我们调用了String的hashCode()方法。再次运行结果如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">true</span><br><span class="line">false</span><br><span class="line">false</span><br><span class="line">a-----hashcode:97</span><br></pre></td></tr></table></figure>
 <p>​    Set的功能已经能够满足我们的要求。</p>
-<p>​    综上，在我们使用类时，如果有比较的需求，就需要重写equals()方法，如果我们有使用散列表的需求，还需要重写hashCode()方法，保证在equals()为真时，两个对象的hashCode相等。</p>
+<p>​    <strong>综上，在我们使用类时，如果有比较的需求，就需要重写equals()方法，如果我们有使用散列表的需求，还需要重写hashCode()方法，保证在equals()为真时，两个对象的hashCode相等。</strong></p>
 
       
     </div>
