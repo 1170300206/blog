@@ -101,7 +101,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Collection,">
 
 
 
@@ -112,13 +112,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Evan&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/04/index.html">
+<meta name="description" content="在Java当中，我们经常使用迭代器来遍历集合类，但很多情况下我们都需要在迭代时对集合中的元素进行删除。 如果你使用以下的方式对List进行操作： 12345for(Object obj: list)&amp;#123;    if(xxxx)&amp;#123;        list.remove(obj)    &amp;#125;&amp;#125; 程序在运行到这里时将会弹出一个ConcurrentModificatio">
+<meta name="keywords" content="Collection">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Iterator 的 remove()方法与迭代集合类时的修改">
+<meta property="og:url" content="http://yoursite.com/2019/04/07/Iterator-remove/index.html">
 <meta property="og:site_name" content="Evan&#39;s blog">
+<meta property="og:description" content="在Java当中，我们经常使用迭代器来遍历集合类，但很多情况下我们都需要在迭代时对集合中的元素进行删除。 如果你使用以下的方式对List进行操作： 12345for(Object obj: list)&amp;#123;    if(xxxx)&amp;#123;        list.remove(obj)    &amp;#125;&amp;#125; 程序在运行到这里时将会弹出一个ConcurrentModificatio">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-13T16:39:14.963Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Evan&#39;s blog">
+<meta name="twitter:title" content="Iterator 的 remove()方法与迭代集合类时的修改">
+<meta name="twitter:description" content="在Java当中，我们经常使用迭代器来遍历集合类，但很多情况下我们都需要在迭代时对集合中的元素进行删除。 如果你使用以下的方式对List进行操作： 12345for(Object obj: list)&amp;#123;    if(xxxx)&amp;#123;        list.remove(obj)    &amp;#125;&amp;#125; 程序在运行到这里时将会弹出一个ConcurrentModificatio">
 
 
 
@@ -148,13 +153,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2019/04/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/07/Iterator-remove/">
 
 
 
 
 
-  <title>归档 | Evan's blog</title>
+  <title>Iterator 的 remove()方法与迭代集合类时的修改 | Evan's blog</title>
   
 
 
@@ -173,7 +178,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,72 +252,240 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 5 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/07/Iterator-remove/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Evan Clark">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Evan's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/04/07/Iterator-remove/" itemprop="url">
-              
-                <span itemprop="name">Iterator 的 remove()方法与迭代集合类时的修改</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Iterator 的 remove()方法与迭代集合类时的修改</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-07T21:51:23+08:00" content="2019-04-07">
-          04-07
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-07T21:51:23+08:00">
+                2019-04-07
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/07/Iterator-remove/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/07/Iterator-remove/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 阅读数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <p>在Java当中，我们经常使用迭代器来遍历集合类，但很多情况下我们都需要在迭代时对集合中的元素进行删除。</p>
+<p>如果你使用以下的方式对List进行操作：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(Object obj: list)&#123;</span><br><span class="line">    <span class="keyword">if</span>(xxxx)&#123;</span><br><span class="line">        list.remove(obj)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>程序在运行到这里时将会弹出一个ConcurrentModificationException的RuntimeException</p>
+<p>在JDK的文档中，对这个异常有如下的描述：</p>
+<blockquote>
+<p>This exception may be thrown by methods that have detected concurrent  modification of an object when such modification is not permissible.  </p>
+<p>For example, it is not generally permissible for one thread to modify a Collection  while another thread is iterating over it.  In general, the results of the  iteration are undefined under these circumstances.  Some Iterator  implementations (including those of all the general purpose collection implementations  provided by the JRE) may choose to throw this exception if this behavior is  detected.  Iterators that do this are known as <em>fail-fast</em> iterators,  as they fail quickly and cleanly, rather that risking arbitrary,  non-deterministic behavior at an undetermined time in the future.  </p>
+<p>Note that this exception does not always indicate that an object has been concurrently modified by a <em>different</em> thread.  If a single thread issues a sequence of method invocations that violates the contract of an object, the object may throw this exception.  <strong>For example, if a thread modifies a collection directly while it is iterating over the collection with a fail-fast iterator, the iterator will throw this exception.</strong></p>
+</blockquote>
+<p>可以看到，当我们在遍历一个集合类时，直接对其进行修改，那么我们将会触发这个异常。</p>
+<p>因此，如果想在遍历集合类时对集合类作出修改，我们应当采用如下的形式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Iterator&lt;Object&gt; it = list.iterator();</span><br><span class="line"><span class="keyword">while</span>(it.hasNext())&#123;</span><br><span class="line">    it.remove();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此处使用it.remove()方法对其进行修改。</p>
+<p>JDK的文档中对remove()方法具有如下的描述：</p>
+<blockquote>
+<p>Removes from the underlying collection the last element returned by this iterator (optional operation).  <strong>This method can be called only once per call to next()</strong>.  The behavior of an iterator is unspecified if the underlying collection is modified while the iteration is in progress in any way other than by calling this method.</p>
+</blockquote>
+<p>因此，值得注意的是，我们若想在遍历时对集合类进行修改，只能使用remove()方法做移除元素一种操作，且每次调用next()方法后才能够使用一次remove()方法，其将会将当前最后一次调用next()方法所得到的元素从集合中删除。文档同时还提醒我们，iterator的行为将会变得不确定，如果我们在使用iterator对集合进行遍历时，作出其他修改。</p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Collection/" rel="tag"># Collection</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/26/hashCode/" rel="next" title="Java 何时需要重写hashCode()和equals()">
+                <i class="fa fa-chevron-left"></i> Java 何时需要重写hashCode()和equals()
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -320,6 +493,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -615,6 +795,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
