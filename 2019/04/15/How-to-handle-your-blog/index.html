@@ -115,17 +115,17 @@
 <meta name="description" content="这个博客使用的是Hexo框架，没有使用github page提供的服务，作死地把静态页面搭建到了服务器上面，一开始搭建的思路是这样的： 本地生成博客-&amp;gt;发布public页面到github-&amp;gt;服务器pull页面 实际上这样的过程非常麻烦，每次更新后需要手动到服务器上面pull页面。因此使用了github-webhook-handler的功能，下面简单记录一下整个配置的过程，并介绍一些遇到">
 <meta name="keywords" content="github,blog,webhook">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用webhook-handler自动部署到服务器">
-<meta property="og:url" content="http://blog/2019/04/15/How-to-handle-your-blog/index.html">
+<meta property="og:title" content="使用webhook-handler自动部署博客到服务器">
+<meta property="og:url" content="http://evanclark.top/2019/04/15/How-to-handle-your-blog/index.html">
 <meta property="og:site_name" content="Evan&#39;s blog">
 <meta property="og:description" content="这个博客使用的是Hexo框架，没有使用github page提供的服务，作死地把静态页面搭建到了服务器上面，一开始搭建的思路是这样的： 本地生成博客-&amp;gt;发布public页面到github-&amp;gt;服务器pull页面 实际上这样的过程非常麻烦，每次更新后需要手动到服务器上面pull页面。因此使用了github-webhook-handler的功能，下面简单记录一下整个配置的过程，并介绍一些遇到">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog/2019/04/15/How-to-handle-your-blog/1.png">
-<meta property="og:updated_time" content="2019-06-15T08:27:52.876Z">
+<meta property="og:image" content="http://evanclark.top/2019/04/15/How-to-handle-your-blog/1.png">
+<meta property="og:updated_time" content="2019-06-15T08:53:51.864Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用webhook-handler自动部署到服务器">
+<meta name="twitter:title" content="使用webhook-handler自动部署博客到服务器">
 <meta name="twitter:description" content="这个博客使用的是Hexo框架，没有使用github page提供的服务，作死地把静态页面搭建到了服务器上面，一开始搭建的思路是这样的： 本地生成博客-&amp;gt;发布public页面到github-&amp;gt;服务器pull页面 实际上这样的过程非常麻烦，每次更新后需要手动到服务器上面pull页面。因此使用了github-webhook-handler的功能，下面简单记录一下整个配置的过程，并介绍一些遇到">
-<meta name="twitter:image" content="http://blog/2019/04/15/How-to-handle-your-blog/1.png">
+<meta name="twitter:image" content="http://evanclark.top/2019/04/15/How-to-handle-your-blog/1.png">
 
 
 
@@ -155,13 +155,13 @@
 
 
 
-  <link rel="canonical" href="http://blog/2019/04/15/How-to-handle-your-blog/">
+  <link rel="canonical" href="http://evanclark.top/2019/04/15/How-to-handle-your-blog/">
 
 
 
 
 
-  <title>使用webhook-handler自动部署到服务器 | Evan's blog</title>
+  <title>使用webhook-handler自动部署博客到服务器 | Evan's blog</title>
   
 
 
@@ -268,7 +268,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog/2019/04/15/How-to-handle-your-blog/">
+    <link itemprop="mainEntityOfPage" href="http://evanclark.top/2019/04/15/How-to-handle-your-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Evan Clark">
@@ -285,7 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用webhook-handler自动部署到服务器</h1>
+          <h1 class="post-title" itemprop="name headline">使用webhook-handler自动部署博客到服务器</h1>
         
 
         <div class="post-meta">
@@ -396,7 +396,7 @@
 <p>We couldn’t deliver this payload: Couldn’t connect to server</p>
 </blockquote>
 <p>这种情况很可能是因为你的webhooks.js并没有运行。比如我使用pm2运行webhooks.js后，再使用<code>pm2 list</code>列出所有进程，但是显示却像下面这样：</p>
-<p><img src="//blog/2019/04/15/How-to-handle-your-blog/1.png" alt="pm2错误"></p>
+<p><img src="//evanclark.top/2019/04/15/How-to-handle-your-blog/1.png" alt="pm2错误"></p>
 <p>即pm2没有办法使这个进程持续运行。</p>
 <p>使用<code>pm2 log webhooks.js</code>能够查看pm2运行webhooks.js的日志，其提示找不到github-webhook-handler，基本上能够确定是地址的问题。我确定自己已经安装了github-webhook-handler，因此肯定是地址错误，在之前，我按照官网的提示，使用了下面的语句：</p>
 <p><code>var createHandler = require(&#39;github-webhook-handler&#39;)</code></p>
